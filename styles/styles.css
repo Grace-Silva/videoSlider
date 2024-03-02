@@ -1,0 +1,156 @@
+/* https://www.cdnfonts.com/pretendo.font */
+@import url('https://fonts.cdnfonts.com/css/pretendo');
+
+/*body font:*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --nintendoRed: #E60012;
+    --black: #0F0F0F;
+    --white: #f4f4f4;
+    --transition: all ease-in-out .5s;
+    --shadow: rgba(0,0,0,.3);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    transition: var(--transition);
+}
+
+body{
+    background: var(--white);
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;                                      
+
+}
+
+.navbar{
+    width: 100%;
+    min-height: 80px;
+    background: var(--nintendoRed);
+    box-shadow: 0 4px 4px var(--shadow);
+    color: var(--white);
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo{
+    border: solid 2px var(--white);
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Pretendo', sans-serif;
+}
+
+.navbar .navlinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.navbar .navigationLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 0 4px;
+}
+
+.navbar .navigationLink a{
+    font-weight: 16px;
+    font-weight: 400;
+    color: var(--white);      
+    font-family: "Poppins", sans-serif;                                      
+}
+
+.navbar .wrapMenu{
+    position: fixed;
+    display: none;
+    top: 2em;
+    right: 2em;
+    z-index: 10000;
+}
+
+.navbar .wrapMenu i{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.carrousel{
+    position: relative;
+}
+
+.carrousel .carrouselItem{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+    display: none;
+    transition: var(--transition);
+}
+
+.carrousel .carrouselItem video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrousel .carrouselItem.active{
+    display: block;
+}
+
+.carrousel .arrows{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    padding: 0 1em;
+    z-index: 100;
+}
+
+.carrousel .arrow{ 
+    display: block;
+    border: solid green;
+    background: var(--white);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    color: var(--nintendoRed);
+    cursor: pointer;
+    box-shadow: 2px 2px 8px var(--shadow);
+    opacity: 1;
+}
+
+.carrousel .arrow:hover{
+    opacity: .8;
+}
+
+.carrousel .arrow i{
+    font-weight: 600;
+    font-size: 18px;
+}

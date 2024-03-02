@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video slider</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- starts navigation bar -->
+    <nav class="navbar">
+
+        <!-- logo -->
+        <div class="logo"><span>Nintendo</span></div>
+
+        <!-- navlinks and icons -->
+        <ul class="navlinks">
+            <li class="navigationLink">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="#">Buscar</a>
+            </li>
+
+            <li class="navigationLink">
+                <i class="fa-solid fa-heart"></i>
+                <a href="#">Lista de Deseos</a>
+            </li>
+
+            <li class="navigationLink">
+                <i class="fa-solid fa-user"></i>
+                <a href="#">Ingresar</a>
+            </li>
+
+        </ul>
+
+        <!-- menu responsive -->
+        <div class="wrapMenu" id="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </nav>
+<!-- ends navigation bar -->   
+
+    <section class="carrousel" id="myCarrousel">
+
+        <!-- starts video banner -->
+        <div class="videoBanner">
+
+            <div class="carrouselItem active">
+                <video class="myvid" src="./assets/001.mp4" autoplay mmuted loop></video>
+            </div>
+
+            <div class="carrouselItem">
+                <video class="myvid" src="./assets/002.mp4" muted loop></video>
+            </div>
+
+            <div class="carrouselItem">
+                <video class="myvid" src="./assets/003.mp4" muted loop></video>
+            </div>
+
+            <div class="carrouselItem">
+                <video class="myvid" src="./assets/004.mp4" muted loop></video>
+            </div>
+
+        </div>
+        <!-- ends video banner -->
+
+        <!-- starts arrows -->
+        <div class="arrows">
+            <!-- left -->
+            <button class="arrow" id="next">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <!-- right-->
+            <button class="arrow" id="prev">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+
+        </div>
+        <!-- ends arrows -->
+
+    </section>
+
+
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
